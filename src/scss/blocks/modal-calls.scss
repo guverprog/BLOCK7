@@ -1,0 +1,21 @@
+.modal-extra-call {
+
+    @media(min-width:1120px) {
+
+
+        .modal__header {
+            margin-top: 40px;
+            position: relative;
+            overflow: visible;
+
+            .modal__title.modal-extra-call__title {
+                margin-top: 10px;
+            }
+
+
+        }
+
+    }
+
+
+}

@@ -1,0 +1,197 @@
+.brand-swiper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    background-color: $block-color;
+
+    .brand-swiper__title {
+        width: 100%;
+        text-transform: uppercase;
+        line-height: 24px;
+        padding: 16px;
+        color: $grey-text-color;
+        letter-spacing: -0.2;
+        background: linear-gradient(270deg, $lite-color 0%, $block-color 100%);
+    }
+
+    .swiper {
+        width: 100%;
+        min-height: 154px;
+
+        div[data-name="lenovo"] {
+            background: url('../img/swiper_icons/lenovo.svg') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        div[data-name="samsung"] {
+            background: url('../img/swiper_icons/samsung.png') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        div[data-name="bosch"] {
+            background: url('../img/swiper_icons/bosch.svg') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        div[data-name="apple"] {
+            background: url('../img/swiper_icons/apple.svg') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        div[data-name="viewsonic"] {
+            background: url('../img/swiper_icons/viewSonic.svg') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        div[data-name="sony"] {
+            background: url('../img/swiper_icons/sony.svg') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        div[data-name="acer"] {
+            background: url('../img/swiper_icons/acer.svg') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        div[data-name="hp"] {
+            background: url('../img/swiper_icons/hp.svg') no-repeat 16px 50%;
+            background-color: $lite-color;
+        }
+
+        .brand-swiper__item {
+            position: relative;
+            width: 240px;
+            height: 72px;
+            background-color: $lite-color;
+            border: 1px solid $border-color-lite;
+            border-radius: 6px;
+            margin: 16px 0 16px 16px;
+
+            &::after {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                content: "";
+                background: url("../img/swiper_icons/dropdown.svg") no-repeat 50% 50%;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                border: 2px solid $main-color;
+            }
+
+            &:hover::after {
+                background-color: $hover-icons-swiper;
+            }
+        }
+
+        .swiper-pagination {
+            margin-bottom: 22px;
+            display: block;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #505157 !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            margin-left: 10px;
+        }
+    }
+
+    .brand-swiper__button {
+        display: none;
+    }
+
+    @media (min-width:768px) {
+        .brand-swiper__title {
+            padding: 16px 24px;
+        }
+
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-left: 24px;
+            margin-top: 10px;
+            width: 100%;
+            height: 180px;
+
+            .swiper-slide {
+                width: 33%;
+                height: 90px;
+
+                .brand-swiper__item {
+                    width: 224px;
+                    margin: 16px 0 0px 0;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            display: none;
+        }
+
+        .brand-swiper__button {
+            position: relative;
+            display: block;
+            align-self: flex-start;
+            padding: 0 35px;
+            margin: 24px 14px;
+            border: none;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $text-color;
+            background-color: $block-color;
+
+            &::before {
+                position: absolute;
+                content: url('../img/swiper_icons/button.svg');
+                margin-left: -18px;
+
+            }
+
+            &:hover {
+                color: $hover-color
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 25%;
+            }
+        }
+    }
+
+    @media(min-width:1120px) {
+        .brand-swiper__title {
+            padding: 16px 32px;
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                .brand-swiper__item {
+                    display: block;
+                    width: 240px;
+                }
+            }
+        }
+
+        .brand-swiper__button {
+            margin-left: 18px;
+        }
+    }
+}
+
+.show {
+    height: auto !important;
+}
+
+.button-clicked::before {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,165 @@
+.modal-extra,
+.modal-extra-call {
+    min-width: 100%;
+    transform: translate(-5000px);
+    position: absolute;
+    z-index: 9;
+    transition: 3s transform;
+
+    @media(min-width:1120px) {
+        .modal {
+            min-width: 440px;
+
+            .modal-feedback {
+                .modal-feedback__input {
+                    min-width: 100%;
+                }
+            }
+
+
+            .modal__header {
+                margin-top: 40px;
+                position: relative;
+                overflow: visible;
+
+                .modal__title {
+                    margin-top: 10px;
+                }
+
+                .modal__button {
+                    position: absolute;
+                    left: -100px;
+                    top: -15px;
+                }
+            }
+        }
+
+    }
+
+    &::before {
+        content: '';
+        right: 320px;
+        min-width: 100%;
+        height: 2200px;
+        position: absolute;
+        background-color: #f2f2f2;
+        opacity: 0.96;
+    }
+
+    .modal {
+        background: $lite-color;
+        min-height: 2200px;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        z-index: 10;
+        position: fixed;
+        box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+
+
+
+        .modal__button {
+            align-self: flex-start;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            border: none;
+            cursor: pointer;
+            background: $main-color url(./../img/icons/14-1.svg) no-repeat 50% 50%;
+            margin: 20px 16px;
+
+            &:hover {
+                background-color: $hover-icons-swiper;
+            }
+        }
+
+        .modal__title {
+            font-family: "TTLakes-Bold";
+            font-size: 28px;
+            line-height: 40px;
+            letter-spacing: -0.6px;
+            color: $text-color;
+            margin-top: 4px;
+            display: flex;
+            position: relative;
+            margin-left: 16px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4px;
+                height: 32px;
+                background: #41F6D7;
+                left: -16px;
+                align-self: center;
+                border-radius: 0 5px 5px 0;
+                padding: auto;
+            }
+
+
+        }
+
+        .modal-feedback {
+            display: flex;
+            flex-direction: column;
+            margin: 0 14px;
+
+
+            .modal-feedback__input {
+                margin-bottom: 16px;
+                background: $lite-color;
+                border: 1px solid $border-color-lite;
+                border-radius: 8px;
+                color: #B5B6BC;
+                width: 260px;
+                height: 48px;
+                padding: 0 16px;
+            }
+
+            textarea.modal-feedback__input {
+                height: 100px;
+                padding: 10px 16px;
+            }
+        }
+
+        .modal-feedback__text {
+            font-size: 14px;
+            line-height: 16px;
+            color: $grey-text-color;
+            margin-top: -8px;
+
+            .modal-feedback__link {
+                color: $main-color;
+                text-decoration: none;
+
+            }
+        }
+
+        .modal-feedback__btn {
+            border: none;
+            width: 136px;
+            height: 32px;
+            color: $lite-color;
+            align-self: end;
+            margin-top: 23px;
+            background: $main-color;
+            border-radius: 16px;
+            text-align: left;
+            letter-spacing: -0.15px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            position: relative;
+            background: $main-color url("../img/swiper_icons/dropdown-white.svg") no-repeat 90% 50%;
+
+            &:hover {
+                background-color: $hover-icons-swiper;
+            }
+        }
+    }
+}
+
+.modal__open {
+    transform: translate(0px);
+    right: 1px;
+}

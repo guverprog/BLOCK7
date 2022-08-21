@@ -1,0 +1,251 @@
+/* BURGER */
+.extra {
+    font-family: "TTLakes-Medium", sans-serif;
+    position: absolute;
+    transform: translate(-5000px);
+    min-width: 100%;
+    z-index: 3;
+    transition: 3s transform;
+}
+
+.extra::after {
+    content: '';
+    left: 320px;
+    width: 100%;
+    height: 2200px;
+    opacity: 0.96;
+    position: absolute;
+    background-color: #f2f2f2;
+}
+
+
+
+.mobile-menu__open {
+    transform: translate(0);
+    transition: 2s transform;
+}
+
+.widget {
+    width: 320px;
+    background-color: #fff;
+    min-height: 2200px;
+    position: fixed;
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+@media (min-width:1440px) {
+    .extra {
+        transform: translate(0);
+        transition: 0s transform;
+    }
+
+    .extra::after {
+        content: '';
+        width: 0;
+    }
+
+    .widget {
+        width: 320px;
+        box-shadow: none;
+        min-height: 2225px;
+        overflow: hidden;
+    }
+
+    .for-widjet {
+        padding-left: 320px;
+    }
+
+    .header {
+        margin-top: 10px;
+    }
+
+    .header__icons-close {
+        display: none;
+    }
+
+
+    .header__logo {
+        margin-right: 40px
+    }
+
+}
+
+/* BURGER */
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__left {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 88px;
+}
+
+.header__right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+
+}
+
+.header__icons,
+.icons {
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.6s linear;
+
+}
+
+.header__icons,
+.icons:hover {
+    background-color: #0ee67a;
+}
+
+.header__icons-close {
+    background: #FF3E79 url("../img/icons/14-1.svg") no-repeat 50% 50%;
+}
+
+.header__logo {
+    background: url("../img/logo.svg") no-repeat center;
+    width: 50%;
+    height: 50%;
+    background-size: contain;
+    border: none;
+    align-self: center;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.header__icons-search {
+    background: #FF3E79 url("../img/icons/14-2.svg") no-repeat 50% 50%;
+}
+
+/* HEADER */
+/* MAIN */
+
+.main__list li {
+    margin: 8px 0px 24px 16px;
+    list-style: none;
+    line-height: 24px;
+    cursor: pointer;
+    color: #1B1C21;
+}
+
+.main__list li:hover {
+    color: #7E7E82;
+}
+
+li.main__list-active {
+    color: #7E7E82;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.main__list-active::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 32px;
+    background: #41F6D7;
+    left: -20px;
+    align-self: center;
+    border-radius: 5px;
+}
+
+@media(min-width:768px) {
+    .main__list li {
+        margin: 32px 0px 24px 18px;
+
+    }
+
+}
+
+/* MAIN */
+/* FOOTER */
+.footer-widjet__buttons {
+    margin-left: 2px;
+}
+
+.footer-widjet__icons {
+    margin: 10px 0 0 16px;
+    cursor: pointer;
+    transition: 0.6s linear;
+}
+
+.footer-widjet__icons-call {
+
+    background: #FF3E79 url("../img/icons/3.svg") no-repeat 50% 50%;
+}
+
+.footer-widjet__icons-chat {
+    background: #FF3E79 url("../img/icons/4.svg") no-repeat 50% 50%;
+}
+
+.footer-widjet__icons-profile {
+    background: #FF3E79 url("../img/icons/5.svg") no-repeat 50% 50%;
+}
+
+.footer-widjet__mail {
+    line-height: 24px;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.footer-widjet__telephone {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    font-family: 'TTLakes-Bold';
+    margin-left: 16px;
+    margin-top: 8px;
+
+}
+
+.footer-widjet__lang {
+    display: flex;
+    margin-left: 9px;
+}
+
+.footer-widjet__list {
+    margin: -16px 0 0 8px;
+    list-style: none;
+    color: #1B1C21;
+}
+
+.footer-widjet__list-active {
+    color: #7E7E82;
+}
+
+@media (min-width:768px) {
+    .widget {
+        padding-left: 6px;
+    }
+
+    .footer-widjet {
+        margin-top: 260px;
+        margin-right: 10px;
+    }
+
+    .footer-widjet__lang {
+        margin-top: 50px;
+    }
+
+    .main__list-active::before {
+        left: -28px
+    }
+}
+
+/* FOOTER */
