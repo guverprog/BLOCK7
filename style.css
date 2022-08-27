@@ -1288,28 +1288,28 @@ button.swiper-pagination-bullet {
   .brand-swiper .swiper {
     width: 100%;
     min-height: 154px; }
-    .brand-swiper .swiper div[data-name="lenovo"] {
+    .brand-swiper .swiper .brand-swiper__item-lenovo {
       background: url(./static/lenovo.svg) no-repeat 16px 50%;
       background-color: #ffffff; }
-    .brand-swiper .swiper div[data-name="samsung"] {
+    .brand-swiper .swiper .brand-swiper__item-samsung {
       background: url(./static/samsung.png) no-repeat 16px 50%;
       background-color: #ffffff; }
-    .brand-swiper .swiper div[data-name="bosch"] {
+    .brand-swiper .swiper .brand-swiper__item-bosch {
       background: url(./static/bosch.svg) no-repeat 16px 50%;
       background-color: #ffffff; }
-    .brand-swiper .swiper div[data-name="apple"] {
+    .brand-swiper .swiper .brand-swiper__item-apple {
       background: url(./static/apple.svg) no-repeat 16px 50%;
       background-color: #ffffff; }
-    .brand-swiper .swiper div[data-name="viewsonic"] {
+    .brand-swiper .swiper .brand-swiper__item-viewsonic {
       background: url(./static/viewSonic.svg) no-repeat 16px 50%;
       background-color: #ffffff; }
-    .brand-swiper .swiper div[data-name="sony"] {
+    .brand-swiper .swiper .brand-swiper__item-sony {
       background: url(./static/sony.svg) no-repeat 16px 50%;
       background-color: #ffffff; }
-    .brand-swiper .swiper div[data-name="acer"] {
+    .brand-swiper .swiper .brand-swiper__item-acer {
       background: url(./static/acer.svg) no-repeat 16px 50%;
       background-color: #ffffff; }
-    .brand-swiper .swiper div[data-name="hp"] {
+    .brand-swiper .swiper .brand-swiper__item-hp {
       background: url(./static/hp.svg) no-repeat 16px 50%;
       background-color: #ffffff; }
     .brand-swiper .swiper .brand-swiper__item {
@@ -1515,20 +1515,30 @@ button.swiper-pagination-bullet {
     background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 100%); }
   .price-swiper .swiper {
     width: 100%; }
-    .price-swiper .swiper .price-swiper__item {
-      position: relative;
-      width: 260px;
+    .price-swiper .swiper .swiper-pagination {
+      margin-bottom: 22px;
+      display: block; }
+    .price-swiper .swiper .swiper-pagination-bullet-active {
+      background-color: #505157 !important; }
+    .price-swiper .swiper .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      margin-left: 10px; }
+    .price-swiper .swiper .price-list-header {
+      display: none; }
+    .price-swiper .swiper .price-list {
+      min-width: 280px;
       height: 200px;
       background: #ffffff;
       border: 1px solid #EAEAEA;
       border-radius: 6px;
       margin: 16px 0 68px 8px;
-      padding: 16px 16px;
       font-size: 14px;
+      padding-left: 16px;
       line-height: 18px;
       letter-spacing: 0.2px;
       color: #7e7e82; }
-      .price-swiper .swiper .price-swiper__item::after {
+      .price-swiper .swiper .price-list::after {
         position: absolute;
         width: 119px;
         height: 32px;
@@ -1547,12 +1557,14 @@ button.swiper-pagination-bullet {
         letter-spacing: -0.15px;
         text-transform: uppercase;
         border: 2px solid #ff3e79; }
-      .price-swiper .swiper .price-swiper__item:hover::after {
+      .price-swiper .swiper .price-list:hover::after {
         background-color: greenyellow; }
-      .price-swiper .swiper .price-swiper__item .price__text {
-        color: #1b1c21; }
-  .price-swiper .price {
-    display: none; }
+      .price-swiper .swiper .price-list .price-list__mobile-text {
+        color: #7E7E82;
+        margin-top: 16px; }
+      .price-swiper .swiper .price-list .price-list__service-text {
+        color: #1B1C21;
+        margin-top: -12px; }
   .price-swiper .price-swiper__text {
     font-size: 14px;
     line-height: 20px;
@@ -1583,42 +1595,40 @@ button.swiper-pagination-bullet {
     .price-swiper .price-swiper__button:hover {
       color: aqua; }
   @media (min-width: 768px) {
-    .price-swiper .swiper {
-      display: none; }
     .price-swiper .price-swiper__title {
       padding: 16px 24px; }
-    .price-swiper .price {
+    .price-swiper .swiper-wrapper {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       width: 95%;
+      height: 100%;
       margin: 0 auto;
-      background-color: #f8f8f8;
-      border-radius: 20px; }
-      .price-swiper .price .price__item {
+      background-color: #f8f8f8; }
+      .price-swiper .swiper-wrapper .price-list {
+        width: 100%;
         position: relative;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        flex-direction: flex-end;
         background-color: #ffffff;
-        padding: 23px 24px;
         font-size: 14px;
-        color: #1b1c21; }
-        .price-swiper .price .price__item:not(:first-child)::before {
+        color: #1b1c21;
+        height: 80px;
+        margin-top: -70px;
+        border: none;
+        padding-top: 30px;
+        border-radius: none;
+        align-content: center; }
+        .price-swiper .swiper-wrapper .price-list:not(:first-child)::before {
           position: absolute;
-          top: 77px;
+          z-index: 10;
+          top: 82px;
           left: auto;
           width: 95%;
           border-bottom: 1px solid #EAEAEA;
           content: ""; }
-        .price-swiper .price .price__item .price__text {
-          display: flex; }
-          .price-swiper .price .price__item .price__text:first-child {
-            width: 50%; }
-          .price-swiper .price .price__item .price__text:nth-child(2) {
-            width: 13%; }
-          .price-swiper .price .price__item .price__text:last-child {
-            width: 15%; }
-        .price-swiper .price .price__item::after {
+        .price-swiper .swiper-wrapper .price-list::after {
           width: 119px;
           height: 32px;
           content: 'Заказать';
@@ -1634,27 +1644,54 @@ button.swiper-pagination-bullet {
           text-align: left;
           letter-spacing: -0.15px;
           text-transform: uppercase; }
-        .price-swiper .price .price__item:hover::after {
-          background-color: greenyellow; }
-        .price-swiper .price .price__item:first-child {
-          background-color: #f8f8f8;
-          font-size: 16px;
-          color: #7e7e82;
-          padding-top: 31px;
-          padding-bottom: 16px; }
-          .price-swiper .price .price__item:first-child:first-child::after {
+        .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          width: 100%; }
+          .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper .price-list__mobile-text {
+            display: none; }
+          .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper .price-list__service-text {
+            display: flex;
+            margin-right: 30px; }
+        .price-swiper .swiper-wrapper .price-list:first-child {
+          margin-top: 16px;
+          background: #F8F8F8; }
+          .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper {
+            display: flex;
+            width: 100%; }
+            .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:first-child {
+              width: 50%; }
+            .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:nth-child(2) {
+              width: 13%; }
+            .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:last-child {
+              width: 15%; }
+          .price-swiper .swiper-wrapper .price-list:first-child:first-child::after {
             content: '';
             width: 119px;
             height: 32px;
-            background: #f8f8f8; }
-        .price-swiper .price .price__item:last-child {
-          border-radius: 0 0 6px 6px; }
-        .price-swiper .price .price__item:nth-child(2) {
-          border-radius: 6px 6px 0 0; }
+            background: #F8F8F8;
+            border: none; }
     .price-swiper .price-swiper__text {
-      margin-top: 24px;
-      max-width: 65.5%; } }
+      margin-top: -40px;
+      max-width: 65.5%;
+      z-index: 40; } }
+  @media (min-width: 900px) {
+    .price-swiper .swiper-wrapper .price-list:not(:first-child) .price-list__service-text {
+      display: flex;
+      margin-right: 80px; } }
+  @media (min-width: 1050px) {
+    .price-swiper .swiper-wrapper .price-list:not(:first-child) .price-list__service-text {
+      display: flex;
+      margin-right: 120px; } }
   @media (min-width: 1120px) {
+    .price-swiper .swiper-wrapper .price-list:first-child .price-list__service-text:nth-child(2) {
+      margin-left: -50px; }
+    .price-swiper .swiper-wrapper .price-list:first-child .price-list__service-text:last-child {
+      margin-left: 60px; }
+    .price-swiper .swiper-wrapper .price-list:not(:first-child) .price-list__service-text {
+      display: flex;
+      margin-right: 150px; }
     .price-swiper .price-swiper__title {
       padding: 16px 32px; }
     .price-swiper .price-swiper__text {
@@ -1722,8 +1759,7 @@ button.swiper-pagination-bullet {
   min-width: 100%;
   transform: translate(-5000px);
   position: absolute;
-  z-index: 9;
-  transition: 3s transform; }
+  z-index: 9; }
   @media (min-width: 1120px) {
     .modal-extra .modal,
     .modal-extra-call .modal {
