@@ -1,11 +1,11 @@
 const showAll = document.querySelectorAll('.swiper-button');
 showAll.forEach((item) => {
     item.addEventListener('click', () => {
-        showAllButton(item.id, item)
+        showAllButton(item.parentNode, item)
     })
 })
 function showAllButton(value, item) {
-    const cardItems = document.querySelector(`[data-name="${value}"]`).querySelectorAll('.swiper-wrapper')
+    const cardItems = value.querySelectorAll('.swiper-wrapper')
     cardItems.forEach((elem) => {
         elem.classList.toggle('show')
         item.classList.toggle('button-clicked')
@@ -16,4 +16,7 @@ function showAllButton(value, item) {
         }
     })
 }
+
+
+
 

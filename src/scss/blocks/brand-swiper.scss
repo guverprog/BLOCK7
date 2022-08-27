@@ -19,42 +19,42 @@
         width: 100%;
         min-height: 154px;
 
-        div[data-name="lenovo"] {
+        .brand-swiper__item-lenovo {
             background: url('../img/swiper_icons/lenovo.svg') no-repeat 16px 50%;
             background-color: $lite-color;
         }
 
-        div[data-name="samsung"] {
+        .brand-swiper__item-samsung {
             background: url('../img/swiper_icons/samsung.png') no-repeat 16px 50%;
             background-color: $lite-color;
         }
 
-        div[data-name="bosch"] {
+        .brand-swiper__item-bosch {
             background: url('../img/swiper_icons/bosch.svg') no-repeat 16px 50%;
             background-color: $lite-color;
         }
 
-        div[data-name="apple"] {
+        .brand-swiper__item-apple {
             background: url('../img/swiper_icons/apple.svg') no-repeat 16px 50%;
             background-color: $lite-color;
         }
 
-        div[data-name="viewsonic"] {
+        .brand-swiper__item-viewsonic {
             background: url('../img/swiper_icons/viewSonic.svg') no-repeat 16px 50%;
             background-color: $lite-color;
         }
 
-        div[data-name="sony"] {
+        .brand-swiper__item-sony {
             background: url('../img/swiper_icons/sony.svg') no-repeat 16px 50%;
             background-color: $lite-color;
         }
 
-        div[data-name="acer"] {
+        .brand-swiper__item-acer {
             background: url('../img/swiper_icons/acer.svg') no-repeat 16px 50%;
             background-color: $lite-color;
         }
 
-        div[data-name="hp"] {
+        .brand-swiper__item-hp {
             background: url('../img/swiper_icons/hp.svg') no-repeat 16px 50%;
             background-color: $lite-color;
         }
