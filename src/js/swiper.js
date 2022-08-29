@@ -53,7 +53,7 @@ const catalogSliderInit = () => {
                 },
                 400: {
                     slidesPerView: 1.42,
-                    spaceBetween: -20,
+                    spaceBetween: 20,
                 },
                 370: {
                     slidesPerView: 1.38,
