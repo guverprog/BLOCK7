@@ -1527,7 +1527,7 @@ button.swiper-pagination-bullet {
     .price-swiper .swiper .price-list-header {
       display: none; }
     .price-swiper .swiper .price-list {
-      min-width: 280px;
+      width: 260px;
       height: 200px;
       background: #ffffff;
       border: 1px solid #EAEAEA;
@@ -1560,10 +1560,10 @@ button.swiper-pagination-bullet {
       .price-swiper .swiper .price-list:hover::after {
         background-color: greenyellow; }
       .price-swiper .swiper .price-list .price-list__mobile-text {
-        color: #7E7E82;
+        color: #7e7e82;
         margin-top: 16px; }
       .price-swiper .swiper .price-list .price-list__service-text {
-        color: #1B1C21;
+        color: #1b1c21;
         margin-top: -12px; }
   .price-swiper .price-swiper__text {
     font-size: 14px;
@@ -1600,24 +1600,19 @@ button.swiper-pagination-bullet {
     .price-swiper .swiper-wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       width: 95%;
-      height: 100%;
       margin: 0 auto;
       background-color: #f8f8f8; }
       .price-swiper .swiper-wrapper .price-list {
         width: 100%;
         position: relative;
         display: flex;
-        justify-content: space-between;
-        flex-direction: flex-end;
         background-color: #ffffff;
-        font-size: 14px;
         color: #1b1c21;
+        margin: 0px 0 0px 8px;
         height: 80px;
-        margin-top: -70px;
-        border: none;
         padding-top: 30px;
+        border: none;
         border-radius: none;
         align-content: center; }
         .price-swiper .swiper-wrapper .price-list:not(:first-child)::before {
@@ -1629,21 +1624,7 @@ button.swiper-pagination-bullet {
           border-bottom: 1px solid #EAEAEA;
           content: ""; }
         .price-swiper .swiper-wrapper .price-list::after {
-          width: 119px;
-          height: 32px;
-          content: 'Заказать';
-          background: #ff3e79 url(./static/dropdown-white.svg) no-repeat 90% 50%;
-          text-transform: uppercase;
-          border-radius: 16px;
-          padding-left: 12px;
-          padding-top: 4px;
-          color: #ffffff;
-          font-family: "TTLakes-Medium";
-          font-size: 12px;
-          line-height: 24px;
-          text-align: left;
-          letter-spacing: -0.15px;
-          text-transform: uppercase; }
+          bottom: 24px; }
         .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper {
           display: flex;
           justify-content: flex-start;
@@ -1652,54 +1633,36 @@ button.swiper-pagination-bullet {
           .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper .price-list__mobile-text {
             display: none; }
           .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper .price-list__service-text {
-            display: flex;
-            margin-right: 30px; }
+            display: inline-block;
+            margin-right: 10px; }
+            .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper .price-list__service-text:nth-child(2) {
+              width: 46%; }
+            .price-swiper .swiper-wrapper .price-list .price-list__item-wrapper .price-list__service-text:nth-child(4) {
+              width: 20%; }
         .price-swiper .swiper-wrapper .price-list:first-child {
           margin-top: 16px;
-          background: #F8F8F8; }
+          background: #f8f8f8; }
           .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper {
             display: flex;
             width: 100%; }
-            .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:first-child {
-              width: 50%; }
-            .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:nth-child(2) {
-              width: 13%; }
-            .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:last-child {
-              width: 15%; }
+            .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text {
+              color: #7e7e82; }
+              .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:first-child {
+                width: 46%; }
+              .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:nth-child(2) {
+                width: 20%; }
+              .price-swiper .swiper-wrapper .price-list:first-child .price-list__item-wrapper .price-list__service-text:last-child {
+                width: 15%; }
           .price-swiper .swiper-wrapper .price-list:first-child:first-child::after {
             content: '';
             width: 119px;
             height: 32px;
-            background: #F8F8F8;
+            background: #f8f8f8;
             border: none; }
     .price-swiper .price-swiper__text {
-      margin-top: -40px;
+      margin-top: 24px;
       max-width: 65.5%;
       z-index: 40; } }
-  @media (min-width: 900px) {
-    .price-swiper .swiper-wrapper .price-list:not(:first-child) .price-list__service-text {
-      display: flex;
-      margin-right: 80px; } }
-  @media (min-width: 1050px) {
-    .price-swiper .swiper-wrapper .price-list:not(:first-child) .price-list__service-text {
-      display: flex;
-      margin-right: 120px; } }
-  @media (min-width: 1120px) {
-    .price-swiper .swiper-wrapper .price-list:first-child .price-list__service-text:nth-child(2) {
-      margin-left: -50px; }
-    .price-swiper .swiper-wrapper .price-list:first-child .price-list__service-text:last-child {
-      margin-left: 60px; }
-    .price-swiper .swiper-wrapper .price-list:not(:first-child) .price-list__service-text {
-      display: flex;
-      margin-right: 150px; }
-    .price-swiper .price-swiper__title {
-      padding: 16px 32px; }
-    .price-swiper .price-swiper__text {
-      max-width: 50%;
-      text-align: left;
-      padding: 32px 0 0 32px; }
-    .price-swiper .price-swiper__button {
-      padding-left: 32px; } }
 
 .footer {
   background-color: #f8f8f8;
